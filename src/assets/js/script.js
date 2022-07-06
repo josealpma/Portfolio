@@ -3,7 +3,7 @@ var w, h, loopId, id, canvas, ctx, particles;
 var options = {
   particleColor: "rgba(255, 255, 255)",
   lineColor: "rgba(215, 45, 116)",
-  particleAmount: 30,
+  particleAmount: getParticles(),
   defaultRadius: 2,
   variantRadius: 2,
   defaultSpeed: .075,
@@ -14,6 +14,25 @@ var options = {
 var rgb = options.lineColor.match(/\d+/g);
 
 document.addEventListener("DOMContentLoaded", init);
+
+function getParticles(){
+  let Width = window.screen.width;
+  let Particles;
+
+  if(Width < 576){
+    Particles = 15;
+  }else if(Width >= 576 && Width <= 768){
+    Particles = 15;
+  }else if(Width > 768 && Width <= 992){
+    Particles = 20;
+  }else if(Width > 992 && Width <= 1200){
+    Particles = 25;
+  }else{
+    Particles = 30;
+  }
+
+  return Particles;
+}
 
 function init() {
   canvas = document.getElementById("canvas");
