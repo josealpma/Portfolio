@@ -31,7 +31,7 @@
     margin-top: 20px;
     color: rgba(255, 255, 255, 0.8);
   }
-  #header h2 span {
+  #header h2 span.highlight {
     color: #fff;
     border-bottom: 2px solid #d72e75;
     padding-bottom: 6px;
@@ -107,6 +107,10 @@
     #header.header-top h1 {
       font-size: 26px;
     }
+  }
+
+  #HelloWorld{
+    font-family: Consolas;
   }
   
 /*--------------------------------------------------------------

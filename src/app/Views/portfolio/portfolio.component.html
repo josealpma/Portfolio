@@ -1,1 +1,28 @@
-<p>portfolio works!</p>
+<!-- ======= portfolio Section ======= -->
+<section id="portfolio" class="portfolio">
+
+  <!-- ======= Portfolio  ======= -->
+  <div class="portfolio container">
+
+    <div class="section-title">
+        <h2>Portfolio</h2>
+        <p>My work</p>
+    </div>
+
+    <div class="row">
+        <div *ngFor="let item of Items" class="col-lg-6 ">
+            <div class="card portfolio-item" >
+                <img src="" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">{{item.Title}}</h5>
+                  <p class="card-text">{{item.Description}}</p>
+                  <a href="#" class="btn btn-project">See more</a>
+                </div>
+              </div>
+        </div>
+    </div>
+
+</div><!-- End Portfolio  -->
+
+    
+</section><!-- End portfolio Section -->
