@@ -40,6 +40,8 @@ function init() {
   resizeReset();
   initialiseElements();
   startAnimation();
+  initTooltips()
+  
 }
 
 function resizeReset() {
@@ -143,4 +145,13 @@ Particle = function() {
     ctx.fillStyle = _this.color;
     ctx.fill();
   }
+}
+
+
+const initTooltips = () => {
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+
 }

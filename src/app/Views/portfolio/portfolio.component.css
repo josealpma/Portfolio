@@ -6,3 +6,17 @@
 .portfolio-item{
     background-color: #ffffff21!important;
 }
+
+.icon-box {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin: 2px;
+    background: rgba(255, 255, 255, 0.08);
+    transition: ease-in-out 0.3s;
+}
+
+.icon-box:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+    

@@ -11,12 +11,32 @@ export class PortfolioComponent implements OnInit {
 
   Items: any = [
     {
+      Title: 'Sunrey',
+      Description: "Landing page for a solar equipment installation and maintenance business. The purpose of this project was to provide prospects and clients with an additional way to approach the business and obtain information.",
+      Technologies: [
+        { Name: 'Angular', Icon: 'devicon-angularjs-plain' },
+        { Name: 'PHP', Icon: 'devicon-php-plain' }
+      ],
+      Url: '',
+      Img: '../../../assets/img/portfolio/Sunrey.webp',
+    },
+    {
       Title: 'Dashboard',
-      Description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero velit omnis quae corporis veritatis unde quam optio sunt enim. Fugit voluptatibus sit, quis assumenda odit aperiam. Quos quisquam magni officiis!',
-      Languages: '',
+      Description: "I'm just testing iterable items :) ",
+      Technologies: [
+        { Name: 'Angular', Icon: 'devicon-angularjs-plain' },
+        // { Name: 'PHP', Icon: 'devicon-php-plain' }
+      ],
       Url: '',
       Img: '',
-    }
+    },
+    // {
+    //   Title: 'Dashboard',
+    //   Description: "I'm just testing iterable items :) ",
+    //   Technologies: '',
+    //   Url: '',
+    //   Img: '',
+    // }
   ];
 
   ngOnInit(): void {

@@ -10,15 +10,30 @@
     </div>
 
     <div class="row">
-        <div *ngFor="let item of Items" class="col-lg-6 ">
+        <div *ngFor="let item of Items" class="col-lg-6 py-2">
             <div class="card portfolio-item" >
-                <img src="" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">{{item.Title}}</h5>
-                  <p class="card-text">{{item.Description}}</p>
-                  <a href="#" class="btn btn-project">See more</a>
+              <div class="card-body">
+
+                <div class="row"> 
+                  <div class="col-md-5">
+                    <img [src]="item.Img" class="img-fluid" alt="">
+                  </div>
+                  
+                  <div class="col-md-7">
+                    <h5 class="card-title">{{item.Title}}</h5>
+               
+                    <p class="card-text">{{item.Description}}</p>
+                    <div class="d-flex my-2">
+                      <div class="icon-box" *ngFor="let tech of item.Technologies">
+                        <span class="text-muted px-1" [title]="tech.Name" data-bs-toggle="tooltip" data-bs-placement="bottom"><i [class]="tech.Icon"></i></span>
+                        </div>
+                    </div>
+                  </div>
+
                 </div>
+                <!-- <a href="#" class="btn btn-project btn-sm">See more</a> -->
               </div>
+            </div>
         </div>
     </div>
 

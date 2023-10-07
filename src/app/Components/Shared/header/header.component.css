@@ -102,7 +102,7 @@
   }
   @media (max-width: 768px) {
     #header.header-top {
-      height: 60px;
+      height: auto;
     }
     #header.header-top h1 {
       font-size: 26px;
@@ -196,7 +196,7 @@
     }
   
     .navbar ul {
-      display: none;
+      /* display: none; */
     }
   }
   .navbar-mobile {
