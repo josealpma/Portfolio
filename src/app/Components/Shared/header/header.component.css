@@ -80,7 +80,7 @@
   
   /* Header Top */
   #header.header-top {
-    height: 80px;
+    height: auto;
     left: 0;
     top: 0;
     right: 0;
@@ -105,7 +105,7 @@
       height: auto;
     }
     #header.header-top h1 {
-      font-size: 26px;
+      font-size: 36px;
     }
   }
 
@@ -195,8 +195,8 @@
       display: block;
     }
   
-    .navbar ul {
-      /* display: none; */
+    .navbar li {
+      margin: 0px 30px;
     }
   }
   .navbar-mobile {
