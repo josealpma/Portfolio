@@ -11,7 +11,7 @@
     overflow-y: auto;
   }
   #header * {
-    transition: ease-in-out 0.3s;
+    transition: ease-in-out 0.1s;
   }
   #header h1 {
     font-size: 48px;
@@ -71,7 +71,7 @@
     #header .social-links {
       margin-top: 15px;
     }
-    #header .container {
+    #header #container {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -80,6 +80,7 @@
   
   /* Header Top */
   #header.header-top {
+    overflow-y: hidden;
     height: auto;
     left: 0;
     top: 0;
@@ -105,7 +106,7 @@
       height: auto;
     }
     #header.header-top h1 {
-      font-size: 36px;
+      font-size: 26px;
     }
   }
 
@@ -121,7 +122,7 @@
 */
 .navbar {
     padding: 0;
-    margin-top: 35px;
+    /* margin-top: 35px; */
   }
   .navbar ul {
     margin: 0;
@@ -137,7 +138,7 @@
   .navbar li + li {
     margin-left: 30px;
   }
-  .navbar a, .navbar a:focus {
+  .navbar a, .navbar a:focus{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -173,6 +174,17 @@
     width: 100%;
   }
   .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+    color: #fff;
+  }
+
+  #offcanvas-list a:hover:before, #offcanvas-list li:hover > a:before, #offcanvas-list .active:before {
+
+    visibility: visible;
+    width: 100%;
+  }
+  #offcanvas-list a:hover, #offcanvas-list .active, #offcanvas-list .active:focus, #offcanvas-list li:hover > a {
+    background-color: #d72e75;
+
     color: #fff;
   }
   
@@ -239,3 +251,26 @@
     position: relative;
   }
   
+#offcanvas{
+  background-color: #131313;
+}
+
+#offcanvas-list{
+  list-style: none; 
+  color:white;
+}
+
+#offcanvas-list  a{
+  list-style: none; 
+  color:white;
+}
+
+#main-title{
+  width:auto;
+}
+
+@media (max-width: 992px) { 
+  #main-title{
+    width:100%
+  }
+ }

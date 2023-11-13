@@ -1,13 +1,15 @@
+
 var w, h, loopId, id, canvas, ctx, particles;
+var inMotion = true;
 
 var options = {
   particleColor: "rgba(255, 255, 255)",
   lineColor: "rgba(215, 45, 116)",
   particleAmount: getParticles(),
   defaultRadius: 2,
-  variantRadius: 2,
-  defaultSpeed: .075,
+  defaultSpeed: .75,
   variantSpeed: .5,
+  aceleration: .05,
   linkRadius: 300
 };
 
@@ -28,7 +30,7 @@ function getParticles(){
   }else if(Width > 992 && Width <= 1200){
     Particles = 25;
   }else{
-    Particles = 30;
+    Particles = 20;
   }
 
   return Particles;
@@ -40,8 +42,8 @@ function init() {
   resizeReset();
   initialiseElements();
   startAnimation();
+
   initTooltips()
-  
 }
 
 function resizeReset() {
@@ -101,6 +103,8 @@ function linkPoints(point, hubs) {
   }
 }
 
+
+
 function checkDistance(x1, y1, x2, y2) {
   return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
 }
@@ -111,13 +115,45 @@ Particle = function() {
   _this.x = Math.random() * w;
   _this.y = Math.random() * h;
   _this.color = options.particleColor;
-  _this.radius = options.defaultRadius + Math.random() * options.variantRadius;
+  _this.radius = options.defaultRadius + Math.random() * options.defaultRadius;
   _this.speed = options.defaultSpeed + Math.random() * options.variantSpeed;
   _this.directionAngle = Math.floor(Math.random() * 360);
-  _this.vector = {
-    x: Math.cos(_this.directionAngle) * _this.speed,
-    y: Math.sin(_this.directionAngle) * _this.speed
+  
+  _this.setVector = () => {
+    _this.vector = {
+      x: Math.cos(_this.directionAngle) * _this.speed,
+      y: Math.sin(_this.directionAngle) * _this.speed
+    }
   }
+
+  _this.slowDown = function() {
+    let slowing = setInterval( () => {
+      if(_this.speed > 0){
+        _this.speed -= .10
+      }else{
+        _this.speed = 0;
+        clearInterval(slowing);
+      }
+      _this.update()
+      _this.setVector();
+    }, 100)
+  }
+
+  _this.aceleration = function(){
+    let acelerate = setInterval( () => {
+      if(_this.speed < options.defaultSpeed){
+        _this.speed += .10
+      }else{
+        _this.speed = options.defaultSpeed + Math.random() * options.variantSpeed;
+        clearInterval(acelerate);
+      }
+      _this.update()
+
+      _this.setVector();
+    }, 100)
+  }
+
+  _this.setVector();
 
   _this.update = function() {
     _this.border();
@@ -145,6 +181,7 @@ Particle = function() {
     ctx.fillStyle = _this.color;
     ctx.fill();
   }
+  
 }
 
 
@@ -154,4 +191,18 @@ const initTooltips = () => {
     return new bootstrap.Tooltip(tooltipTriggerEl)
   })
 
+}
+
+
+
+
+const switchMotion =() =>  {
+  inMotion = !inMotion;
+  for (var i = 0; i < particles.length; i++) {
+    if(inMotion){
+      particles[i].aceleration();
+    }else{
+      particles[i].slowDown();
+    }
+  }
 }
