@@ -16,11 +16,17 @@ export class HeaderComponent implements OnInit {
   taps: number = 0;
 
   ngOnInit(): void {
+    
     this.router.events.pipe(
       filter((event): event is NavigationEnd => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
       // Verifica la ruta actual y actualiza la propiedad isVisible
-      this.isVisible = event.url !== '/home';
+      if(event.url.toString() !== '/'){
+        this.isVisible =  event.url.toString() !== '/home';
+      }else{
+        this.isVisible = false;
+      }
+      
     });
   }
 

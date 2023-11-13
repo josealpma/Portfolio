@@ -7,7 +7,7 @@ var options = {
   lineColor: "rgba(215, 45, 116)",
   particleAmount: getParticles(),
   defaultRadius: 2,
-  defaultSpeed: .75,
+  defaultSpeed: .2,
   variantSpeed: .5,
   aceleration: .05,
   linkRadius: 300
