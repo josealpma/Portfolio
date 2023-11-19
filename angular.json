@@ -31,6 +31,7 @@
             ],
             "styles": [
               "src/styles.css",
+              "src/fonts.css",
               "src/assets/vendor/remixicon/remixicon.css",
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/bootstrap-icons/font/bootstrap-icons.css"

@@ -1,0 +1,8 @@
+@font-face {
+    font-family: Consolas;
+    src: url(assets/font/Consolas.ttf) format("opentype");
+}
+
+* {
+    font-family: 'Consolas', 'arial', sans-serif;
+}

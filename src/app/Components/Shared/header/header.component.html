@@ -1,19 +1,17 @@
 <header id="header" class="user-select-none">
-    <div id="container" class="container px-4 justify-content-between">
+    <div id="container" class="container px-2 justify-content-between">
 
         <div id="main-title" class="row">
             <div class="col-12 d-flex justify-content-lg-start justify-content-center">
                 <h1 class="text-center mt-3 mr-auto">
                     <a>Alejandro Ponce</a>
                 </h1> 
-                <button *ngIf="isVisible" class="navbar-toggler text-light m-2 d-lg-none fs-2 mr-0 " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">
+                <button *ngIf="isVisible" class="navbar-toggler text-light mx-0 my-2 d-lg-none fs-2 px-0 " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">
                     <span class="bi bi-list"></span>
                 </button>
             </div>
             
         </div>
-       
-        
 
         <h2 class="text-lg-start text-center mb-4"><span id="HelloWorld">Hello World</span>, I'm a <span role="button" class="highlight" (click)="fnTapme()" title="Tap me" data-bs-toggle="tooltip" data-bs-placement="top">developer</span> from Monterrey, MX</h2>
 
