@@ -193,10 +193,7 @@ const initTooltips = () => {
 
 }
 
-
-
-
-const switchMotion =() =>  {
+window.switchMotion = () =>  {
   inMotion = !inMotion;
   for (var i = 0; i < particles.length; i++) {
     if(inMotion){

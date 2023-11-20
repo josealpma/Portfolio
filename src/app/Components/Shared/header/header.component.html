@@ -13,7 +13,7 @@
             
         </div>
 
-        <h2 class="text-lg-start text-center mb-4"><span id="HelloWorld">Hello World</span>, I'm a <span role="button" class="highlight" (click)="fnTapme()" title="Tap me" data-bs-toggle="tooltip" data-bs-placement="top">developer</span> from Monterrey, MX</h2>
+        <h2 class="text-lg-start text-center mb-4"><span class="consolas">Hello world</span>, I'm a <span role="button" class="highlight" (click)="fnTapme()" title="Don't tap me" data-bs-toggle="tooltip" data-bs-placement="top">developer</span> from Monterrey, MX</h2>
 
         <nav id="navbar" class="navbar d-lg-flex d-none">
             <ul class="d-flex flex-wrap justify-content-center">
@@ -47,12 +47,22 @@
         </button>
     </div>
     <div class="offcanvas-body px-0">
-        <ul id="offcanvas-list" class="fs-4 px-0">
+        <ul id="offcanvas-list" class="fs-6 px-0">
             <li><a data-bs-dismiss="offcanvas" routerLink="/home" routerLinkActive="active" class="nav-link ">Home</a></li>
             <li><a data-bs-dismiss="offcanvas" routerLink="/about" routerLinkActive="active" class="nav-link">About</a></li>
             <li><a data-bs-dismiss="offcanvas" routerLink="/resume" routerLinkActive="active" class="nav-link">Resume</a></li>
             <li><a data-bs-dismiss="offcanvas" routerLink="/portfolio" routerLinkActive="active" class="nav-link">Portfolio</a></li>
             <li><a data-bs-dismiss="offcanvas" routerLink="/contact" routerLinkActive="active" class="nav-link">Contact</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Language
+                </a>
+                <ul class="dropdown-menu bg-dark">
+                    <li><a class="dropdown-item" href="#">🇲🇽 Spanish</a></li>
+                    <li><a class="dropdown-item" href="#">🇺🇸 English</a></li>
+                </ul>
+            </li>
+        
         </ul>
         
     </div>

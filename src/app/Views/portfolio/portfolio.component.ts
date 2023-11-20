@@ -20,23 +20,16 @@ export class PortfolioComponent implements OnInit {
       Url: '',
       Img: '../../../assets/img/portfolio/Sunrey.webp',
     },
-    {
-      Title: 'Dashboard',
-      Description: "I'm just testing iterable items :) ",
-      Technologies: [
-        { Name: 'Angular', Icon: 'devicon-angularjs-plain' },
-        // { Name: 'PHP', Icon: 'devicon-php-plain' }
-      ],
-      Url: '',
-      Img: '',
-    },
     // {
     //   Title: 'Dashboard',
     //   Description: "I'm just testing iterable items :) ",
-    //   Technologies: '',
+    //   Technologies: [
+    //     { Name: 'Angular', Icon: 'devicon-angularjs-plain' },
+    //   ],
     //   Url: '',
     //   Img: '',
-    // }
+    // },
+    
   ];
 
   ngOnInit(): void {

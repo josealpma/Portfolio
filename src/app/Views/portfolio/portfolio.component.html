@@ -20,12 +20,12 @@
                   </div>
                   
                   <div class="col-md-7">
-                    <h5 class="card-title">{{item.Title}}</h5>
+                    <h5 class="card-title mt-2 fw-bold">{{item.Title}}</h5>
                
                     <p class="card-text">{{item.Description}}</p>
                     <div class="d-flex my-2">
-                      <div class="icon-box" *ngFor="let tech of item.Technologies">
-                        <span class="text-muted px-1" [title]="tech.Name" data-bs-toggle="tooltip" data-bs-placement="bottom"><i [class]="tech.Icon"></i></span>
+                      <div class="icon-box" *ngFor="let tech of item.Technologies" [title]="tech.Name" data-bs-toggle="tooltip" data-bs-placement="bottom">
+                        <span class="text-muted px-1" ><i [class]="tech.Icon"></i></span>
                         </div>
                     </div>
                   </div>

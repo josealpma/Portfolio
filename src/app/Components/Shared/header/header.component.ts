@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
+declare var window: any;
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,7 @@ import { filter } from 'rxjs/operators';
 })
 export class HeaderComponent implements OnInit {
   isVisible = true;
-
+  counter: number = 0;
   constructor(private router: Router) { }
 
   taps: number = 0;
@@ -32,7 +33,9 @@ export class HeaderComponent implements OnInit {
 
   fnTapme(): void{
     this.taps += 1;
+    this.counter += 1;
     if(this.taps % 5 == 0){
+      window.switchMotion();
     }
   }
 

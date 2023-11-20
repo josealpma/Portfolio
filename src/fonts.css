@@ -3,6 +3,9 @@
     src: url(assets/font/Consolas.ttf) format("opentype");
 }
 
-* {
-    font-family: 'Consolas', 'arial', sans-serif;
+
+.consolas{
+    font-family: Consolas;
+    font-weight: bold;
 }
+  
