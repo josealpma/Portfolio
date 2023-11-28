@@ -92,7 +92,7 @@ function linkPoints(point, hubs) {
     var distance = checkDistance(point.x, point.y, hubs[i].x, hubs[i].y);
     var opacity = 1 - distance / options.linkRadius;
     if (opacity > 0) {
-      ctx.lineWidth = 1;
+      ctx.lineWidth = 1.5;
       ctx.strokeStyle = 'rgba('+rgb[0]+','+rgb[1]+','+rgb[2]+','+opacity+')';
       ctx.beginPath();
       ctx.moveTo(point.x, point.y);

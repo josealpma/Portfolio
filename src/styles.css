@@ -65,3 +65,22 @@ section .container {
   font-family: "Poppins", sans-serif;
   color: #fff;
 }
+
+
+@keyframes cursorBlink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.text-cursor{
+  font-family: monospace;
+  color: #000;
+  /* Aplica la animación al texto */
+  animation: cursorBlink 1s infinite;
+}
+
+.text-cursor {
+  content: '|';  /* Este es el cursor */
+  padding-left: 2px;  /* Espacio entre el cursor y el texto */
+}
